@@ -48,37 +48,37 @@ Perbedaan utama dari ketiganya adalah pada komponen controller pada MVC, templat
 
 <h1> Tugas 2 </h1>
 
-<h2> Perbedaan antara form POST dan GET dala, Django </h2>
-1. Metode Pengiriman Data dan Keamanan
+<h2> Perbedaan antara form POST dan GET dala, Django </h2> 
+1.Metode Pengiriman Data dan Keamanan
 * POST : Data dikirimkan sebagai bagian dari body permintaan HTTP tidak terlihat dalam URL
-* GET : Data dikirimkan sebagai parameter di URL
+* GET : Data dikirimkan sebagai parameter di URL \n
 
 2. Penggunaan
 * POST : Digunakan ketika ingin mengirimkan data yang akan memengaruhi perubahan di server
-* GET : Digunakan ketika ingin mengambil data dari server
+* GET : Digunakan ketika ingin mengambil data dari server \n
 
 3. Keamanan
 * POST : Lebih aman karena data tidak terlihat dalam URL
-* GET : Kurang aman karena data dapat dilihat pada URL
+* GET : Kurang aman karena data dapat dilihat pada URL \n
 
 4. Penangan Data:
 * POST : Ditangani oleh view Django yang menggunakan metode request.POST atau request.FILES (jika ada unggahan file)
-* GET : Ditangani oleh view Django yang menggunakan metode request.GET
+* GET : Ditangani oleh view Django yang menggunakan metode request.GET \n 
 
 <h2>  Perbedaan utama antara XML, JSON, dan HTML dalam konteks pengiriman data </h2>
-1. XML : Menggunakan tag pembuka dan penutup untuk mengelilingi data (mirip seperti HTML). Setiap elemen atau node memiliki struktur hierarki yang jelas. Struktur ini berbentuk seperti struktur pohon yang dimulai dengan elemen akar/induk baru kemudian elemen anak.
-2. JSON : Menggunakan pasangan key dan values dalam tanda kurung kurawal sehingga lebih mudah dibaca oleh manusia.
-3. HTML : tidak secara khusus dirancang untuk pengiriman data. Namun, bisa digunakan untuk mengirimkan data dalam bentuk formulir. HTML lebih sering digunakan untuk membuat struktur halaman web.
+1. XML : Menggunakan tag pembuka dan penutup untuk mengelilingi data (mirip seperti HTML). Setiap elemen atau node memiliki struktur hierarki yang jelas. Struktur ini berbentuk seperti struktur pohon yang dimulai dengan elemen akar/induk baru kemudian elemen anak. \n
+2. JSON : Menggunakan pasangan key dan values dalam tanda kurung kurawal sehingga lebih mudah dibaca oleh manusia. \n
+3. HTML : tidak secara khusus dirancang untuk pengiriman data. Namun, bisa digunakan untuk mengirimkan data dalam bentuk formulir. HTML lebih sering digunakan untuk membuat struktur halaman web. \n
 
 <h2> Alasan JSON sering digunakan dalam pertukaran data antara aplikasi web modern </h2>
-1. Memiliki sintaks yang sederhana dan mudah dibaca oleh manusia
-2. JSON memiliki overhead yang rendah dalam hal ukuran data sehingga lebih ringan dan cepat dalam pengiriman data
-3. JSON bisa dipahami oleh hampir semua bahasa pemrograman
+1. Memiliki sintaks yang sederhana dan mudah dibaca oleh manusia \n
+2. JSON memiliki overhead yang rendah dalam hal ukuran data sehingga lebih ringan dan cepat dalam pengiriman data \n
+3. JSON bisa dipahami oleh hampir semua bahasa pemrograman \n
 4. JSON mendukung berbagai tipe data (termasuk array) sehingga dapat menggambarkaan data yang kompleks dan dinamis dengan mudah.
 
 <h2> Cara saya mengimplementasikan seluruh checklist</h2>
 
-<h5> Membuat input form </h5>
+<h4> Membuat input form </h4>
 
 Pertama saya membuat berkas form.py yang digunakan untuk membuat sebuah form dengan menggunakan kelas ModelForm berdasarkan model Item. Disini saya membuat kelas ProductForm yang mewarisi semua fitur dan fungsi dari kelas ModelForm. Lalu saya membuat kelas Meta yang di dalamnya memuat model yang akan menjadi dasar pembuatan form, dan juga menentukan bidang-bidang dari model Item yang akan dimasukkan dalam form ini.
 
@@ -88,7 +88,7 @@ Lalu saya membuat kondisi bahwa form hanya akan diproses jika data yang dikirimk
 
 Lalu ditambahkan url untuk memanggil fungsi create_product.
 
-<h5> Membuat 5 fungsi </h5>
+<h4> Membuat 5 fungsi </h4>
 HTML : disini saya mengedit fungsi show_main sehingga merender juga seluruh item yang sudah disimpan di database. Kemudian pada main.html, saya tampilkan seluruh atribut dari item-item yang sudah dibuat tadi.
 
 XML : disini saya membuat fungsi show_xml yang mengambil seluruh data item yang sudah disimpan dalam database, kemudian menserialize menjadi format xml, lalu dikembalikan HttpResponse dengan content_type yang mengindikasikan bahwa response berisi data dalam format XML
@@ -103,14 +103,19 @@ Lalu saya membuat URL routing untuk masing-masing fungsi view pada urls.py pada 
 
 <h2> Screenshoot </h2>
 HTML :
+
 ![show_main](./shown_main.png)
-XML
+XML :
+
 ![XML](./xml.png)
-JSON
+JSON:
+
 ![JSON](./json.png)
-XML by ID
+XML by ID :
+
 ![XML_ID](./xml_id.png)
-JSON by ID
+JSON by ID :
+
 ![JSON_ID](./json_id.png)
 
 
