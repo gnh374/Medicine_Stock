@@ -49,8 +49,8 @@ Perbedaan utama dari ketiganya adalah pada komponen controller pada MVC, templat
 <h1> Tugas 2 </h1>
 
 <h2> Perbedaan antara form POST dan GET dala, Django </h2> 
-1. Metode Pengiriman Data dan Keamanan
-* POST : Data dikirimkan sebagai bagian dari body permintaan HTTP tidak terlihat dalam URL
+1. Metode Pengiriman Data dan Keamanan <br>
+* POST : Data dikirimkan sebagai bagian dari body permintaan HTTP tidak terlihat dalam URL <br>
 * GET : Data dikirimkan sebagai parameter di URL <br>
 
 2. Penggunaan
@@ -89,7 +89,7 @@ Lalu saya membuat kondisi bahwa form hanya akan diproses jika data yang dikirimk
 Lalu ditambahkan url untuk memanggil fungsi create_product.
 
 <h4> Membuat 5 fungsi </h4>
-HTML : disini saya mengedit fungsi show_main sehingga merender juga seluruh item yang sudah disimpan di database. Kemudian pada main.html, saya tampilkan seluruh atribut dari item-item yang sudah dibuat tadi.
+HTML : disini saya mengedit fungsi show_main sehingga merender juga seluruh item yang sudah disimpan di database. Kemudian pada main.html, saya tampilkan seluruh atribut dari item-item yang sudah dibuat tadi. <br>
 
 XML : disini saya membuat fungsi show_xml yang mengambil seluruh data item yang sudah disimpan dalam database, kemudian menserialize menjadi format xml, lalu dikembalikan HttpResponse dengan content_type yang mengindikasikan bahwa response berisi data dalam format XML
 
