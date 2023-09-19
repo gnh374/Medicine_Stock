@@ -31,7 +31,7 @@ Memungkinkan untuk membuat aplikasi web berbasis Django tanpa menggunakan virtua
 <h2> MVC, MVT, dan MVVM </h2>
 MVC (Model-View-Controller), MVT (Model-View-Template), dan MVVM (Model-View-ViewModel) adalah pola arsitektur perangkat lunak yang menerapkan prinsip separation of concern. Prinsip ini memisahkan perangkat lunak menjadi beberapa komponen yang mana masing-masing komponen bertanggung jawab untuk suatu askpek dalam perangkat lunak. Perbedaan di antara ketiga arsitektur ini adalah cara mereka menerapkan separation of concern atau cara mereka memisahkan komponen pada perangkat lunaknya sehingga ada beberapa komponen yang berbeda.
 
-MVC (Model-View-Controller):\n
+MVC (Model-View-Controller):<br>
     - Model = berhubungan dengan data
     - View: berhubungan dengan user interface dan menampilkan data
     - Controller : Mengontrol application flow dan user input
@@ -51,7 +51,7 @@ Perbedaan utama dari ketiganya adalah pada komponen controller pada MVC, templat
 <h2> Perbedaan antara form POST dan GET dala, Django </h2> 
 1.Metode Pengiriman Data dan Keamanan
 * POST : Data dikirimkan sebagai bagian dari body permintaan HTTP tidak terlihat dalam URL
-* GET : Data dikirimkan sebagai parameter di URL \n
+* GET : Data dikirimkan sebagai parameter di URL <br>
 
 2. Penggunaan
 * POST : Digunakan ketika ingin mengirimkan data yang akan memengaruhi perubahan di server
