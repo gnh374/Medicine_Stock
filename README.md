@@ -104,7 +104,7 @@ Lalu saya membuat URL routing untuk masing-masing fungsi view pada urls.py pada 
 <h2> Screenshoot </h2>
 HTML :
 
-![show_main](./shown_main.png)
+![show_main](./show_main.png)
 XML :
 
 ![XML](./xml.png)
