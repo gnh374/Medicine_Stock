@@ -1,5 +1,7 @@
 Link : https://medicine-stock-naomi.adaptable.app 
 
+<h1> Tugas 2 </h1>
+
 <h2>Cara saya mengimplementaikan seluruh checklist </h2>
 1. Saya membuat folder baru dengan nama Medicine_Stock pada lokal saya untuk menginisiasi repositori baru dan mengonfigurasi git pada folder ini. Saya juga membuat file README.md pada folder ini. Lalu saya membuat repository baru pada GitHub saya dengan visibilitas publik. Lalu saya membuat branch utama baru dan menghubungkan repository lokal saya dengan repository yang ada di GitHub saya kemudian melakukan push, sehingga file README saya sekarang sudah ada di repository GitHub saya. Setelah itu pada Git CMD saya, saya masuk ke direktori Medicine_Stock tadi lalu membuat dan menjalankan virtual environment. Lalu pada folder yang sama, saya membuat file requirements.txt yang berisi dependencies yang saya butuhkan untuk projek ini dan meng-install dependecies ini pada virtual environment. Lalu saya membuat projek django baru. Setelah itu, saya melihat bahwa ada kesalahan pada struktur file yang saya buat, sehingga saya membenarkannya dengan cara memastikan bahwa file README, requirements, manage, db.sqlite3 berada pada direktori utama, dan file init,asgi,settings,urls, dan wsgi pada direktori proyek. Lalu saya mengedit settings.py untuk mengizinkan semua host untuk bisa mengakses app. Lalu saya membuat berkas .gitignore pada direktori utama untuk mengabaikan berkas-berkas yang perlu diabaikan oleh Git. Setelah itu, saya melakukan add, commit, dan push untuk mengupdate repository GitHub saya agar sesuai dengan local saya setelah dilakukan perubahan. Lalu saya mendeploy app ini pada Adaptable
 
@@ -43,3 +45,78 @@ MVVM (Model-View-ViewModel)
     - ViewModel : Berperan sebagai perantara antara Model dan View. ViewModel bertanggung jawab untuk menyiapkan data untuk view dan memperbarui view saat data berubah.
 
 Perbedaan utama dari ketiganya adalah pada komponen controller pada MVC, template pada MVT dan ViewModel pada MVVM
+
+<h1> Tugas 2 </h1>
+
+<h2> Perbedaan antara form POST dan GET dala, Django </h2>
+1. Metode Pengiriman Data dan Keamanan
+* POST : Data dikirimkan sebagai bagian dari body permintaan HTTP tidak terlihat dalam URL
+* GET : Data dikirimkan sebagai parameter di URL
+
+2. Penggunaan
+* POST : Digunakan ketika ingin mengirimkan data yang akan memengaruhi perubahan di server
+* GET : Digunakan ketika ingin mengambil data dari server
+
+3. Keamanan
+* POST : Lebih aman karena data tidak terlihat dalam URL
+* GET : Kurang aman karena data dapat dilihat pada URL
+
+4. Penangan Data:
+* POST : Ditangani oleh view Django yang menggunakan metode request.POST atau request.FILES (jika ada unggahan file)
+* GET : Ditangani oleh view Django yang menggunakan metode request.GET
+
+<h2>  Perbedaan utama antara XML, JSON, dan HTML dalam konteks pengiriman data </h2>
+1. XML : Menggunakan tag pembuka dan penutup untuk mengelilingi data (mirip seperti HTML). Setiap elemen atau node memiliki struktur hierarki yang jelas. Struktur ini berbentuk seperti struktur pohon yang dimulai dengan elemen akar/induk baru kemudian elemen anak.
+2. JSON : Menggunakan pasangan key dan values dalam tanda kurung kurawal sehingga lebih mudah dibaca oleh manusia.
+3. HTML : tidak secara khusus dirancang untuk pengiriman data. Namun, bisa digunakan untuk mengirimkan data dalam bentuk formulir. HTML lebih sering digunakan untuk membuat struktur halaman web.
+
+<h2> Alasan JSON sering digunakan dalam pertukaran data antara aplikasi web modern </h2>
+1. Memiliki sintaks yang sederhana dan mudah dibaca oleh manusia
+2. JSON memiliki overhead yang rendah dalam hal ukuran data sehingga lebih ringan dan cepat dalam pengiriman data
+3. JSON bisa dipahami oleh hampir semua bahasa pemrograman
+4. JSON mendukung berbagai tipe data (termasuk array) sehingga dapat menggambarkaan data yang kompleks dan dinamis dengan mudah.
+
+<h2> Cara saya mengimplementasikan seluruh checklist</h2>
+
+<h5> Membuat input form </h5>
+
+Pertama saya membuat berkas form.py yang digunakan untuk membuat sebuah form dengan menggunakan kelas ModelForm berdasarkan model Item. Disini saya membuat kelas ProductForm yang mewarisi semua fitur dan fungsi dari kelas ModelForm. Lalu saya membuat kelas Meta yang di dalamnya memuat model yang akan menjadi dasar pembuatan form, dan juga menentukan bidang-bidang dari model Item yang akan dimasukkan dalam form ini.
+
+Lalu saya membuat fungsi create_product pada file views.py yang ada di folder main yang menerima parameter request. Lalu saya membuat instance dari ProductForm. request.POST digunakan untuk mengisi form yang dikirimkan oleh pengguna dengan metode POST dan none untuk membuat form kosong ketika halaman pertama kali diakses.
+
+Lalu saya membuat kondisi bahwa form hanya akan diproses jika data yang dikirimkan valid sesuai dengan yang didefinisikan pada ProductForm dan requestnya adalah POST. Setelah data berhasil disimpan, pengguna akan dibawa kembali ke home page. Jika requestnya adalah GET atau form tidak valid, maka akan merender form ini ke halaman create_product.html. Halaman ini berisi form yang memungkinkan pengguna untuk mengisi form.
+
+Lalu ditambahkan url untuk memanggil fungsi create_product.
+
+<h5> Membuat 5 fungsi </h5>
+HTML : disini saya mengedit fungsi show_main sehingga merender juga seluruh item yang sudah disimpan di database. Kemudian pada main.html, saya tampilkan seluruh atribut dari item-item yang sudah dibuat tadi.
+
+XML : disini saya membuat fungsi show_xml yang mengambil seluruh data item yang sudah disimpan dalam database, kemudian menserialize menjadi format xml, lalu dikembalikan HttpResponse dengan content_type yang mengindikasikan bahwa response berisi data dalam format XML
+
+JSON : disini saya membuat fungsi show_json yang mengambil seluruh data item yang sudah disimpan dalam database, kemudian menserialize menjadi format JSON, lalu dikembalikan HttpResponse dengan content_type yang mengindikasikan bahwa response berisi data dalam format JSON.
+
+XML by ID : disini saya membuat fungsi show_xml_by_id yang menerima parameter request dan id. Fungsi ini engambil satu item berdasarkan ID yang ditentukan, kemudian menserialize menjadi format xml, lalu dikembalikan HttpResponse dengan content_type yang mengindikasikan bahwa response berisi data dalam format XML
+
+JSON by ID : disini saya membuat fungsi show_json_by_id yang menerima parameter request dan id. Fungsi ini engambil satu item berdasarkan ID yang ditentukan, kemudian menserialize menjadi format JSON, lalu dikembalikan HttpResponse dengan content_type yang mengindikasikan bahwa response berisi data dalam format JSON
+
+Lalu saya membuat URL routing untuk masing-masing fungsi view pada urls.py pada main folder
+
+<h2> Screenshoot </h2>
+HTML :
+![show_main](./shown_main.png)
+XML
+![XML](./xml.png)
+JSON
+![JSON](./json.png)
+XML by ID
+![XML_ID](./xml_id.png)
+JSON by ID
+![JSON_ID](./json_id.png)
+
+
+
+
+
+
+
+
