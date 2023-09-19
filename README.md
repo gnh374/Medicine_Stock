@@ -32,24 +32,24 @@ Memungkinkan untuk membuat aplikasi web berbasis Django tanpa menggunakan virtua
 MVC (Model-View-Controller), MVT (Model-View-Template), dan MVVM (Model-View-ViewModel) adalah pola arsitektur perangkat lunak yang menerapkan prinsip separation of concern. Prinsip ini memisahkan perangkat lunak menjadi beberapa komponen yang mana masing-masing komponen bertanggung jawab untuk suatu askpek dalam perangkat lunak. Perbedaan di antara ketiga arsitektur ini adalah cara mereka menerapkan separation of concern atau cara mereka memisahkan komponen pada perangkat lunaknya sehingga ada beberapa komponen yang berbeda.
 
 MVC (Model-View-Controller):<br>
-    - Model = berhubungan dengan data
-    - View: berhubungan dengan user interface dan menampilkan data
-    - Controller : Mengontrol application flow dan user input
-MVT (Model-View-Template):
-    - Model = berhubungan dengan data
-    - View: berhubungan dengan user interface dan menampilkan data
-    - Template : Bertanggung jawab untuk HTML rendering (mengatur tampilan) dan menggabungkan data dari Model dan View ke dalam HTML.
+    - Model = berhubungan dengan data <br>
+    - View: berhubungan dengan user interface dan menampilkan data <br>
+    - Controller : Mengontrol application flow dan user input <br>
+MVT (Model-View-Template): <br>
+    - Model = berhubungan dengan data <br>
+    - View: berhubungan dengan user interface dan menampilkan data <br>
+    - Template : Bertanggung jawab untuk HTML rendering (mengatur tampilan) dan menggabungkan data dari Model dan View ke dalam HTML <br>
 MVVM (Model-View-ViewModel)
-    - Model = berhubungan dengan data
-    - View: berhubungan dengan user interface dan menampilkan data
-    - ViewModel : Berperan sebagai perantara antara Model dan View. ViewModel bertanggung jawab untuk menyiapkan data untuk view dan memperbarui view saat data berubah.
+    - Model = berhubungan dengan data <br>
+    - View: berhubungan dengan user interface dan menampilkan data <br>
+    - ViewModel : Berperan sebagai perantara antara Model dan View. ViewModel bertanggung jawab untuk menyiapkan data untuk view dan memperbarui view saat data berubah. <br>
 
 Perbedaan utama dari ketiganya adalah pada komponen controller pada MVC, template pada MVT dan ViewModel pada MVVM
 
 <h1> Tugas 2 </h1>
 
 <h2> Perbedaan antara form POST dan GET dala, Django </h2> 
-1.Metode Pengiriman Data dan Keamanan
+1. Metode Pengiriman Data dan Keamanan
 * POST : Data dikirimkan sebagai bagian dari body permintaan HTTP tidak terlihat dalam URL
 * GET : Data dikirimkan sebagai parameter di URL <br>
 
@@ -63,17 +63,17 @@ Perbedaan utama dari ketiganya adalah pada komponen controller pada MVC, templat
 
 4. Penangan Data:
 * POST : Ditangani oleh view Django yang menggunakan metode request.POST atau request.FILES (jika ada unggahan file)
-* GET : Ditangani oleh view Django yang menggunakan metode request.GET \
+* GET : Ditangani oleh view Django yang menggunakan metode request.GET 
 
 <h2>  Perbedaan utama antara XML, JSON, dan HTML dalam konteks pengiriman data </h2>
 1. XML : Menggunakan tag pembuka dan penutup untuk mengelilingi data (mirip seperti HTML). Setiap elemen atau node memiliki struktur hierarki yang jelas. Struktur ini berbentuk seperti struktur pohon yang dimulai dengan elemen akar/induk baru kemudian elemen anak. <br>
 2. JSON : Menggunakan pasangan key dan values dalam tanda kurung kurawal sehingga lebih mudah dibaca oleh manusia. <br>
-3. HTML : tidak secara khusus dirancang untuk pengiriman data. Namun, bisa digunakan untuk mengirimkan data dalam bentuk formulir. HTML lebih sering digunakan untuk membuat struktur halaman web. \n
+3. HTML : tidak secara khusus dirancang untuk pengiriman data. Namun, bisa digunakan untuk mengirimkan data dalam bentuk formulir. HTML lebih sering digunakan untuk membuat struktur halaman web. <br>
 
 <h2> Alasan JSON sering digunakan dalam pertukaran data antara aplikasi web modern </h2>
-1. Memiliki sintaks yang sederhana dan mudah dibaca oleh manusia \n
-2. JSON memiliki overhead yang rendah dalam hal ukuran data sehingga lebih ringan dan cepat dalam pengiriman data \n
-3. JSON bisa dipahami oleh hampir semua bahasa pemrograman \n
+1. Memiliki sintaks yang sederhana dan mudah dibaca oleh manusia <br>
+2. JSON memiliki overhead yang rendah dalam hal ukuran data sehingga lebih ringan dan cepat dalam pengiriman data <br>
+3. JSON bisa dipahami oleh hampir semua bahasa pemrograman <br>
 4. JSON mendukung berbagai tipe data (termasuk array) sehingga dapat menggambarkaan data yang kompleks dan dinamis dengan mudah.
 
 <h2> Cara saya mengimplementasikan seluruh checklist</h2>
