@@ -55,19 +55,19 @@ Perbedaan utama dari ketiganya adalah pada komponen controller pada MVC, templat
 
 2. Penggunaan
 * POST : Digunakan ketika ingin mengirimkan data yang akan memengaruhi perubahan di server
-* GET : Digunakan ketika ingin mengambil data dari server \n
+* GET : Digunakan ketika ingin mengambil data dari server 
 
 3. Keamanan
 * POST : Lebih aman karena data tidak terlihat dalam URL
-* GET : Kurang aman karena data dapat dilihat pada URL \n
+* GET : Kurang aman karena data dapat dilihat pada URL 
 
 4. Penangan Data:
 * POST : Ditangani oleh view Django yang menggunakan metode request.POST atau request.FILES (jika ada unggahan file)
-* GET : Ditangani oleh view Django yang menggunakan metode request.GET \n 
+* GET : Ditangani oleh view Django yang menggunakan metode request.GET \
 
 <h2>  Perbedaan utama antara XML, JSON, dan HTML dalam konteks pengiriman data </h2>
-1. XML : Menggunakan tag pembuka dan penutup untuk mengelilingi data (mirip seperti HTML). Setiap elemen atau node memiliki struktur hierarki yang jelas. Struktur ini berbentuk seperti struktur pohon yang dimulai dengan elemen akar/induk baru kemudian elemen anak. \n
-2. JSON : Menggunakan pasangan key dan values dalam tanda kurung kurawal sehingga lebih mudah dibaca oleh manusia. \n
+1. XML : Menggunakan tag pembuka dan penutup untuk mengelilingi data (mirip seperti HTML). Setiap elemen atau node memiliki struktur hierarki yang jelas. Struktur ini berbentuk seperti struktur pohon yang dimulai dengan elemen akar/induk baru kemudian elemen anak. <br>
+2. JSON : Menggunakan pasangan key dan values dalam tanda kurung kurawal sehingga lebih mudah dibaca oleh manusia. <br>
 3. HTML : tidak secara khusus dirancang untuk pengiriman data. Namun, bisa digunakan untuk mengirimkan data dalam bentuk formulir. HTML lebih sering digunakan untuk membuat struktur halaman web. \n
 
 <h2> Alasan JSON sering digunakan dalam pertukaran data antara aplikasi web modern </h2>
