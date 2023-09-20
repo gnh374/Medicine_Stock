@@ -99,7 +99,16 @@ XML by ID : disini saya membuat fungsi show_xml_by_id yang menerima parameter re
 
 JSON by ID : disini saya membuat fungsi show_json_by_id yang menerima parameter request dan id. Fungsi ini engambil satu item berdasarkan ID yang ditentukan, kemudian menserialize menjadi format JSON, lalu dikembalikan HttpResponse dengan content_type yang mengindikasikan bahwa response berisi data dalam format JSON
 
-Lalu saya membuat URL routing untuk masing-masing fungsi view pada urls.py pada main folder
+<h4> Membuat routing URL </h4>
+Lalu saya menambahkan URL routing untuk masing-masing fungsi view (yang belum ada routingnya) pada urls.py pada main folder dengan menggunakan path() sebagia berikut :
+    <pre>
+    ```
+    path('xml/', show_xml, name = 'show_xml'),
+    path('json/', show_json, name = 'show_json'),
+    path('xml/<int:id>/', show_xml_by_id, name='show_xml_by_id'),
+    path('json/<int:id>/', show_json_by_id, name='show_json_by_id'), 
+    ```
+    </pre>
 
 <h2> Screenshoot </h2>
 HTML :
