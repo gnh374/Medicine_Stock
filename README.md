@@ -135,7 +135,7 @@ Salah satu dari banyak formulir bawaan Django yang digunakan khususnya untuk mem
 
 Kelebihan :
 1. Mudah digunakan dan membuat developer tidak perlu membuat form dari awal
-2. Integrasi dengan Authentication = 
+2. Integrasi dengan Authentication 
 3. Konfigurasi dapat dikustomisasi = dapat menambahkan atau menghapus bidang yang diperlukan dalam formulit.
 
 Kekurangan:
