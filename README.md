@@ -207,4 +207,4 @@ Lalu untuk menggunakan data lastlogin dari cookies, saya mengimport beberapa hal
 Lalu pada fungsi show_main bagian context, saya membuat variabel last_login yang akan berisi data dari cookie yanng bernama last_login yang didapatkan dari request.Lalu saya juga menambahkan potongan code yang berfungsi untuk menghapus cookie jika pengguna sudah logout pada fungsi logout_user. Kemudian menampilkan informasi last login ini pada file html.
 
 <h4> Membuat 2 user dengan 3 dummy data </h4>
-Saya membuat user dengan masuk ke lama register, kemudian login dan membuat 3 produk dengan menggunakan tombol add product
+Saya membuat user dengan masuk ke laman register, kemudian login dan membuat 3 produk dengan menggunakan tombol add product
