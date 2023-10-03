@@ -1,62 +1,69 @@
 {% extends 'base.html' %}
+<style>
+
+</style>
 
 {% block content %}
-    <h1>Medicine Stock Page</h1>
-
-    <h2>Name:</h2>
-    <p>{{name}}</p>
-
-    <h2>Class:</h2>
-    <p>{{class}}</p>
+<nav class="navbar navbar-expand-lg "  style="background-color:#e3f2fd;">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">Navbar</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+        <div class="navbar-nav">
+          <a class="nav-link" disabled>{{name}}</a>
+          <a class="nav-link" disabled>{{class}}</a>
+          <a href="{% url 'main:logout' %}">
+            <button class="logout_button">
+                Logout
+            </button>
+            </a>
+            <a href="{% url 'main:create_product' %}">
+                <button class="logout_button">
+                    Add New Product
+                </button>
+            </a>
+        
+        </div>
+      </div>
+    </div>
+  </nav>
+  <div>
+    <div class=" judul">
+    <h1 style="font-family: Montserrat;"> <strong>Medicine Stock</strong> </h1>
     <h4> Kamu menyimpan {{amount_items}} item pada aplikasi ini </h4>
-    <table>
-        <tr>
-            <th>Name</th>
-            <th>Amount</th>
-            <th>Description</th>
-        </tr>
-    
-        {% comment %} Berikut cara memperlihatkan data produk di bawah baris ini {% endcomment %}
-    
+    </div>
+    <div>
+        <br>
+        <h7 >Sesi terakhir login: {{ last_login }}</h7><br>
+       
+        </div>
+    <div class="card-container">
         {% for item in items %}
-            <tr>
-                <td>{{item.name}}</td>
-                <td>{{item.amount}}</td>
-                <td>{{item.description}}</td>
-                <td>  <a href="{% url 'main:tambah' item.pk %}">
-                    <button>
+            <div class="card">
+                <div class="card-header">
+                    <strong>{{ item.name }}</strong>
+                </div>
+                <div class="card-body">
+                    <p><strong>Amount:</strong> {{ item.amount }}</p>
+                    <p><strong>Description:</strong> {{ item.description }}</p>
+                </div>
+                <div class="card-footer">
+                    <a href="{% url 'main:tambah' item.pk %}" class="btn btn-primary">
                         +
-                    </button>
                     </a>
-                </td>
-                <td>  <a href="{% url 'main:kurang' item.pk %}">
-                    <button>
+                    <a href="{% url 'main:kurang' item.pk %}" class="btn btn-secondary">
                         -
-                    </button>
                     </a>
-                </td>
-                <td>  <a href="{% url 'main:hapus' item.pk %}">
-                    <button>
-                        delete
-                    </button>
+                    <a href="{% url 'main:hapus' item.pk %}" class="btn btn-danger">
+                        Delete
                     </a>
-                </td>
-            </tr>
+                </div>
+            </div>
         {% endfor %}
-    </table>
+    </div>
     
-    <br />
-    <h5>Sesi terakhir login: {{ last_login }}</h5>
-    <a href="{% url 'main:create_product' %}">
-        <button>
-            Add New Product
-        </button>
-    </a>
-
-    <a href="{% url 'main:logout' %}">
-        <button>
-            Logout
-        </button>
-    </a>
     
+</div>   
 {% endblock content %}

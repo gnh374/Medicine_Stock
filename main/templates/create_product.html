@@ -1,19 +1,44 @@
 {% extends 'base.html' %} 
 
 {% block content %}
-<h1>Add New Product</h1>
+<div class="container add-product" style="text-align: center; align-items: center;justify-content: center;">
 
-<form method="POST">
-    {% csrf_token %}
-    <table>
-        {{ form.as_table }}
-        <tr>
-            <td></td>
-            <td>
-                <input type="submit" value="Add Product"/>
-            </td>
-        </tr>
-    </table>
-</form>
-
+    <div>
+    <form method="POST">
+        {% csrf_token %}
+        <table>  
+            <div class=" row add-product-form">
+                <h1 style="text-align: center;background-color:#e8f4fd ;">Add New Product</h1>
+                {% for field in form %}
+                <div class="col-md-5">
+                    <div class="form-group">
+                        <label class="register-button" for="{{ field.id_for_label }}">{{ field.label }}</label>
+                        
+                    </div>
+                </div>
+                <div class="col-md-5">
+                    <div class="form-group">
+                        {{ field }}
+                    </div>
+                </div>
+              
+                {% endfor %}
+            </div> 
+            <tr>  
+                <td></td>
+                <div class="d-grid gap-3 mt-3" > <td><input class="btn btn-primary" type="submit" name="submit" value="Daftar"/></td>  </div>
+            </tr>  
+        </table>  
+    </div>
+        <!-- <table>
+            {{ form.as_table }}
+            <tr>
+                <td></td>
+                <td>
+                    <input type="submit" value="Add Product"/>
+                </td>
+            </tr>
+        </table> -->
+    </form>
+</div>
 {% endblock %}

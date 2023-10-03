@@ -1,6 +1,6 @@
 Link : https://medicine-stock-naomi.adaptable.app 
 
-<h1> Tugas 1 </h1>
+<h1> Tugas 2 </h1>
 
 <h2>Cara saya mengimplementaikan seluruh checklist </h2>
 1. Saya membuat folder baru dengan nama Medicine_Stock pada lokal saya untuk menginisiasi repositori baru dan mengonfigurasi git pada folder ini. Saya juga membuat file README.md pada folder ini. Lalu saya membuat repository baru pada GitHub saya dengan visibilitas publik. Lalu saya membuat branch utama baru dan menghubungkan repository lokal saya dengan repository yang ada di GitHub saya kemudian melakukan push, sehingga file README saya sekarang sudah ada di repository GitHub saya. Setelah itu pada Git CMD saya, saya masuk ke direktori Medicine_Stock tadi lalu membuat dan menjalankan virtual environment. Lalu pada folder yang sama, saya membuat file requirements.txt yang berisi dependencies yang saya butuhkan untuk projek ini dan meng-install dependecies ini pada virtual environment. Lalu saya membuat projek django baru. Setelah itu, saya melihat bahwa ada kesalahan pada struktur file yang saya buat, sehingga saya membenarkannya dengan cara memastikan bahwa file README, requirements, manage, db.sqlite3 berada pada direktori utama, dan file init,asgi,settings,urls, dan wsgi pada direktori proyek. Lalu saya mengedit settings.py untuk mengizinkan semua host untuk bisa mengakses app. Lalu saya membuat berkas .gitignore pada direktori utama untuk mengabaikan berkas-berkas yang perlu diabaikan oleh Git. Setelah itu, saya melakukan add, commit, dan push untuk mengupdate repository GitHub saya agar sesuai dengan local saya setelah dilakukan perubahan. Lalu saya mendeploy app ini pada Adaptable
@@ -46,7 +46,7 @@ MVVM (Model-View-ViewModel)
 
 Perbedaan utama dari ketiganya adalah pada komponen controller pada MVC, template pada MVT dan ViewModel pada MVVM
 
-<h1> Tugas 2 </h1>
+<h1> Tugas 3 </h1>
 
 <h2> Perbedaan antara form POST dan GET dala, Django </h2> 
 1. Metode Pengiriman Data dan Keamanan <br>
@@ -129,7 +129,7 @@ JSON by ID :
 ![JSON_ID](./json_id.png)
 
 
-<h1> Tugas 3 </h1>
+<h1> Tugas 4 </h1>
 <h3> Django UserCreationForm</h3>
 Salah satu dari banyak formulir bawaan Django yang digunakan khususnya untuk membuat akun pengguna baru (formulir register).
 
@@ -208,3 +208,38 @@ Lalu pada fungsi show_main bagian context, saya membuat variabel last_login yang
 
 <h4> Membuat 2 user dengan 3 dummy data </h4>
 Saya membuat user dengan masuk ke laman register, kemudian login dan membuat 3 produk dengan menggunakan tombol add product
+
+<h1> Tugas 5 </h1>
+<h4> Steps </h4>
+1. Saya menambahkan tag agar halaman web bisa menyesuaikan ukuran dan perilaku sesuai perangkat
+2. Saya menambahkan bootstrap. Saya menggunakan file CSS dari JsDelivr CDN yang bisa digunakan untuk umum. Lalu saya juga menambahkan link ke file javascript
+3. Setelah style dari file itu terapply di web saya, saya mengubah beberapa tampilan pada halaman login, register dan juga main saya.
+4. Pada halaman login, saya menggunakan beberapa class yang sudah diberikan oleh CSS seperti container lalu juga ada btn primary untuk mengedit button menjadi warna bitu. Saya juga membuat beberapa kelas baru agar bisa memodifikasi halaman login saya sesuai keinginan saya ,seperti string-login untuk memodifikasi huruf yg ada di halaman ini, lalu class wrap.login untuk sebagai container yang aka wrap elemen-elemen login dan lain sebagainya.
+5. Kemudian, pada halaman main, saya menambahkan navbar berdasarkan dokumentasi bootstrap. Pada navbar ini akan ditampilkan nama user, kelas user dan juga tombol logout serta tombol add new product. Disini saya juga membuat kelas baru yaitu "logout_button" untuk melakukan customisasi kedua tombol pada navbar. Lalu saya juga membagi halaman ini ke beberapa bagian untuk mengatur layoutnya. Saya juga mengubah font, serta membuat card untuk menampilkan daftar item. Di sini saya menggunakan class card yang saya modifikasi kembali agar cardnya sesuai dengan keingin saya. Saya juga membuat class card yang bisa mendeteksi apakah card ini ganjil atau genap sehingga dihasilkan card yang berbeda tampilan (selang-seling). Lalu saya juga membuat class card untuk card terahir agar bisa ditampilkan card yang berbeda dari lainnya. Pada class card ini juga dibagi menjadi 3 class lain, yaitu ada card-header, card-bodt dan card-footer yang masinh-masing menangani bagiannya sendiri. Pada card footer terdapat 3 button, yang untuk classnya saya meenggunakan class btn dari CSS dan juga btn sendiri untuk menambah margin.
+6. Pada halaman register, saya juga membagi halaman ini ke beberapa bagian. Kemudian saya juga melakukan customisasi beberapa class untuk membuat tampilan yang sesuai keingin saya. Saya juga menggunakan beberapa kelas yang saya  gunakan pada kelas login.
+7. Pada halaman add product pun saya mengimplementasikan hal yang sama dengan pada halaman register, bahkan beberapa menggunakan class yang dibuat untuk class register.
+
+<h4> Selector </h4>
+1.Universal selector <br>
+-Manfaat : untuk memilih semua elemen di dalam HTML
+-Penggunaan: Jika ingin memberikan gaya default pada semua elemen
+
+2.Type selector <br>
+-Manfaat: Memilih semua elemen dengan tipe tertentu 
+-Penggunaan: Saat ingin memberikan style yang sama untuk elemen tipe tertentu
+
+3.Class selector <br>
+-Manfaat: dapat memberikan gaya yang sama untuk elemen yang memiliki atribut class tertentu
+-Penggunaan: Ketika ingin memberikan gaya elemen yang sama untuk suatu elemen dengan class tertentu.
+
+4.Id selector <br>
+-Manfaat: Memberikan gaya untuk semua elemen dengan id yang sama
+-Penggunaan: Ketika ingin memberikan gaya elemen yang sama untuk suatu elemen dengan id tertentu.
+
+5.Pseudo-class Selector <br>
+-Manfaat: Memilih elemen berdasarkan keadaan atau kondisi tertentu, seprti:'hover',dll
+-Penggunaan: Untuk memberikan gaya ke elemen dalam respons terhadap tindakan pengguna. 
+
+6.Pseudo-element Selector 
+-Manfaat: memungkinkan untuk memilih dan mengubah bagian tertentu dari elemen, seperti ::before atau ::after
+-Penggunaan:  untuk menambahkan konten atau dekorasi tambahan ke elemen, seperti tanda panah sebelum teks atau lapisan latar belakang di atas elemen.
