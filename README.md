@@ -211,35 +211,79 @@ Saya membuat user dengan masuk ke laman register, kemudian login dan membuat 3 p
 
 <h1> Tugas 5 </h1>
 <h4> Steps </h4>
-1. Saya menambahkan tag agar halaman web bisa menyesuaikan ukuran dan perilaku sesuai perangkat
-2. Saya menambahkan bootstrap. Saya menggunakan file CSS dari JsDelivr CDN yang bisa digunakan untuk umum. Lalu saya juga menambahkan link ke file javascript
-3. Setelah style dari file itu terapply di web saya, saya mengubah beberapa tampilan pada halaman login, register dan juga main saya.
-4. Pada halaman login, saya menggunakan beberapa class yang sudah diberikan oleh CSS seperti container lalu juga ada btn primary untuk mengedit button menjadi warna bitu. Saya juga membuat beberapa kelas baru agar bisa memodifikasi halaman login saya sesuai keinginan saya ,seperti string-login untuk memodifikasi huruf yg ada di halaman ini, lalu class wrap.login untuk sebagai container yang aka wrap elemen-elemen login dan lain sebagainya.
-5. Kemudian, pada halaman main, saya menambahkan navbar berdasarkan dokumentasi bootstrap. Pada navbar ini akan ditampilkan nama user, kelas user dan juga tombol logout serta tombol add new product. Disini saya juga membuat kelas baru yaitu "logout_button" untuk melakukan customisasi kedua tombol pada navbar. Lalu saya juga membagi halaman ini ke beberapa bagian untuk mengatur layoutnya. Saya juga mengubah font, serta membuat card untuk menampilkan daftar item. Di sini saya menggunakan class card yang saya modifikasi kembali agar cardnya sesuai dengan keingin saya. Saya juga membuat class card yang bisa mendeteksi apakah card ini ganjil atau genap sehingga dihasilkan card yang berbeda tampilan (selang-seling). Lalu saya juga membuat class card untuk card terahir agar bisa ditampilkan card yang berbeda dari lainnya. Pada class card ini juga dibagi menjadi 3 class lain, yaitu ada card-header, card-bodt dan card-footer yang masinh-masing menangani bagiannya sendiri. Pada card footer terdapat 3 button, yang untuk classnya saya meenggunakan class btn dari CSS dan juga btn sendiri untuk menambah margin.
-6. Pada halaman register, saya juga membagi halaman ini ke beberapa bagian. Kemudian saya juga melakukan customisasi beberapa class untuk membuat tampilan yang sesuai keingin saya. Saya juga menggunakan beberapa kelas yang saya  gunakan pada kelas login.
-7. Pada halaman add product pun saya mengimplementasikan hal yang sama dengan pada halaman register, bahkan beberapa menggunakan class yang dibuat untuk class register.
+1. Saya menambahkan tag agar halaman web bisa menyesuaikan ukuran dan perilaku sesuai perangkat<br>
+2. Saya menambahkan bootstrap. Saya menggunakan file CSS dari JsDelivr CDN yang bisa digunakan untuk umum. Lalu saya juga menambahkan link ke file javascript<br>
+3. Setelah style dari file itu terapply di web saya, saya mengubah beberapa tampilan pada halaman login, register dan juga main saya.<br>
+4. Pada halaman login, saya menggunakan beberapa class yang sudah diberikan oleh CSS seperti container lalu juga ada btn primary untuk mengedit button menjadi warna bitu. Saya juga membuat beberapa kelas baru agar bisa memodifikasi halaman login saya sesuai keinginan saya ,seperti string-login untuk memodifikasi huruf yg ada di halaman ini, lalu class wrap.login untuk sebagai container yang aka wrap elemen-elemen login dan lain sebagainya.<br>
+5. Kemudian, pada halaman main, saya menambahkan navbar berdasarkan dokumentasi bootstrap. Pada navbar ini akan ditampilkan nama user, kelas user dan juga tombol logout serta tombol add new product. Disini saya juga membuat kelas baru yaitu "logout_button" untuk melakukan customisasi kedua tombol pada navbar. Lalu saya juga membagi halaman ini ke beberapa bagian untuk mengatur layoutnya. Saya juga mengubah font, serta membuat card untuk menampilkan daftar item. Di sini saya menggunakan class card yang saya modifikasi kembali agar cardnya sesuai dengan keingin saya. Saya juga membuat class card yang bisa mendeteksi apakah card ini ganjil atau genap sehingga dihasilkan card yang berbeda tampilan (selang-seling). Lalu saya juga membuat class card untuk card terahir agar bisa ditampilkan card yang berbeda dari lainnya. Pada class card ini juga dibagi menjadi 3 class lain, yaitu ada card-header, card-bodt dan card-footer yang masinh-masing menangani bagiannya sendiri. Pada card footer terdapat 3 button, yang untuk classnya saya meenggunakan class btn dari CSS dan juga btn sendiri untuk menambah margin.<br>
+6. Pada halaman register, saya juga membagi halaman ini ke beberapa bagian. Kemudian saya juga melakukan customisasi beberapa class untuk membuat tampilan yang sesuai keingin saya. Saya juga menggunakan beberapa kelas yang saya  gunakan pada kelas login.<br>
+7. Pada halaman add product pun saya mengimplementasikan hal yang sama dengan pada halaman register, bahkan beberapa menggunakan class yang dibuat untuk class register.<br>
 
 <h4> Selector </h4>
 1.Universal selector <br>
--Manfaat : untuk memilih semua elemen di dalam HTML
--Penggunaan: Jika ingin memberikan gaya default pada semua elemen
+-Manfaat : untuk memilih semua elemen di dalam HTML<br>
+-Penggunaan: Jika ingin memberikan gaya default pada semua elemen<br>
 
 2.Type selector <br>
--Manfaat: Memilih semua elemen dengan tipe tertentu 
--Penggunaan: Saat ingin memberikan style yang sama untuk elemen tipe tertentu
+-Manfaat: Memilih semua elemen dengan tipe tertentu <br>
+-Penggunaan: Saat ingin memberikan style yang sama untuk elemen tipe tertentu<br>
 
 3.Class selector <br>
--Manfaat: dapat memberikan gaya yang sama untuk elemen yang memiliki atribut class tertentu
--Penggunaan: Ketika ingin memberikan gaya elemen yang sama untuk suatu elemen dengan class tertentu.
+-Manfaat: dapat memberikan gaya yang sama untuk elemen yang memiliki atribut class tertentu<br>
+-Penggunaan: Ketika ingin memberikan gaya elemen yang sama untuk suatu elemen dengan class tertentu.<br>
 
 4.Id selector <br>
--Manfaat: Memberikan gaya untuk semua elemen dengan id yang sama
--Penggunaan: Ketika ingin memberikan gaya elemen yang sama untuk suatu elemen dengan id tertentu.
+-Manfaat: Memberikan gaya untuk semua elemen dengan id yang sama<br>
+-Penggunaan: Ketika ingin memberikan gaya elemen yang sama untuk suatu elemen dengan id tertentu.<br>
 
 5.Pseudo-class Selector <br>
--Manfaat: Memilih elemen berdasarkan keadaan atau kondisi tertentu, seprti:'hover',dll
--Penggunaan: Untuk memberikan gaya ke elemen dalam respons terhadap tindakan pengguna. 
+-Manfaat: Memilih elemen berdasarkan keadaan atau kondisi tertentu, seprti:'hover',dll<br>
+-Penggunaan: Untuk memberikan gaya ke elemen dalam respons terhadap tindakan pengguna. <br>
 
 6.Pseudo-element Selector 
--Manfaat: memungkinkan untuk memilih dan mengubah bagian tertentu dari elemen, seperti ::before atau ::after
--Penggunaan:  untuk menambahkan konten atau dekorasi tambahan ke elemen, seperti tanda panah sebelum teks atau lapisan latar belakang di atas elemen.
+-Manfaat: memungkinkan untuk memilih dan mengubah bagian tertentu dari elemen, seperti ::before atau ::after<br>
+-Penggunaan:  untuk menambahkan konten atau dekorasi tambahan ke elemen, seperti tanda panah sebelum teks atau lapisan latar belakang di atas elemen.<br>
+
+7.Attribute Selector <br>
+-Manfaat: Unttuk memilih dan mengubah style berdasarkan atribut atau nilai atribut tertentu <br>
+-Penggunaan: Jika ingin mengubah gaya elemen berdasarkan atribut atau nilai tertentu  <br>
+
+8.Descendant selector <br>
+-Manfaat: Memilih element turunan uang berada pada elemen induk <br>
+-Penggunaan:ketika ingin mengatur gaya elemen turunan di dalam elemen induk tertentu. <br>
+
+9.Child selector <br>
+-Manfaat: memilih elemen yang menjadi anak langsung dari elemen induk tertentu, seperti .container > p untuk memilih semua elemen p yang menjadi anak langsung dari elemen dengan kelas .container.<br>
+-Penggunaan: ketika ingin mengubah gaya elemen anak yang langsung berada dalam elemen induk tertentu<br>
+
+10.Adjacent Sibling Selector <br>
+-Maanfaat: memilih elemen yang menjadi saudara sejajar (bersebelahan) dengan elemen lain<br>
+-Penggunaan: ketika ingin mengubah gaya elemen yang berada langsung setelah elemen lain.<br>
+
+<h4> HTML5 Tag</h4>
+1.header: Mendifinisikan bagian atas HTML <br>
+2.nav: Mengelompokkan tautan navigasi, membantu membuat navbar <br>
+3. h1,h2,h3..: Heading dalam dokumen HTML <br>
+4. p: tag untuk menandakan paragraf<br>
+5. a: untuk membuat tautan / hyperlink dalam HTML<br>
+6. br: untuk line break<br>
+7. div: divisi / wadah yang dapat mengelompokkan sekelompok elemen HTML<br>
+8. ul: membuat daftar tak bernomor<br>
+9. ol: membuat daftar bernomor<br>
+10. li: M=mendefinisikan setiap elemen dalam daftar<br>
+11. style: menyematkan CSS seacara langsung dalam HTML<br>
+12. strog: memnebalkan tulisan<br>
+
+<h4> Perbedaan margin dan padding</h4>
+-Margin: Mengatur jarak antar elemen sehingga memperngaruhi tata letak berdasarkan jaraknya dengan elemen lain <br>
+-Padding: Mengatur jarak antara elemen yang ada di dalam dengan containernya sendiri. 
+
+<h4> Perbedaan Tailwind dan Bootstrap</h4>
+-Tailwind membangun tampilan dengan menggabungkan kelas-kelas utilitas yang telah didefinisikan sebelumnya. Bootstrap menggunakan gaya dan komponen yang telah didefinisikan sehingga punya tampilan yang  bisa dipakai secara langsung. <br>
+-Tailwind memiliki file CSS yang lebih kecil. Bootstrap memiliki file CSS yang lebih besar<br>
+-Tailwind memiliki fleksibilitas yang tinggi. Boostrap menghasilkan tampilan yang lebih konsisten karena cenderung menggunakan komponen yang sudah ada.<br>
+-Tailwind lebih sulit dipelajari. Bootstap lebih mudah dipelajari karena tinggal menggunakan komponen yang sudah ada.<br>
+
+Penggunaan: <br>
+-Pakai Bootstrap saat ingin mendesain web dengan bagus dan lebih mudah karena hanya perlu memakai komponen yang sudah ada. Cocok jika tampilan bukanlah hal yang utama dan konsistensi cukup diperhatikan. <br>
+-Pakai Tailwind jika ingin melakukan banyak kustomisasi desain. Cocok digunakan untuk mengatur tampilan dengan cepat menggunakan kelas-kelas langsung di elemen HTML tanpa harus membuat banyak CSS kustom. <br>

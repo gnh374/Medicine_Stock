@@ -8,7 +8,7 @@
         {% csrf_token %}
         <table>  
             <div class=" row add-product-form">
-                <h1 style="text-align: center;background-color:#e8f4fd ;">Add New Product</h1>
+                <h1 class="register-button" style="text-align: center;">Add New Product</h1>
                 {% for field in form %}
                 <div class="col-md-5">
                     <div class="form-group">
@@ -26,7 +26,7 @@
             </div> 
             <tr>  
                 <td></td>
-                <div class="d-grid gap-3 mt-3" > <td><input class="btn btn-primary" type="submit" name="submit" value="Daftar"/></td>  </div>
+                <div > <td><input class="btn btn-primary d-grid " type="submit" name="submit" value="Daftar"/></td>  </div>
             </tr>  
         </table>  
     </div>

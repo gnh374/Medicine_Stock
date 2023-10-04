@@ -8,18 +8,18 @@
 
 <div class ="container mt-5 ml-5 mr-5">
     <div class=" container wrap-login">
-        <div>  <h1 class="string-login ">Login</h1></div>
+        <div>  <h1 class="string-login register-button">Login</h1></div>
         <form method="POST" action="">
             {% csrf_token %}
         <div>
             <table>
                 <tr>
-                    <td >Username: </td>
+                    <td > <label class="register-button"> Username: </label></td>
                     <td><input  type="text" name="username" placeholder="Username" class="form-control"></td>
                 </tr>
                         
                 <tr >
-                    <td>Password: </td>
+                    <td> <label class="register-button"> Password:</label> </td>
                     <td><input type="password" name="password" placeholder="Password" class="form-control"></td>
                 </tr>
             </table>
