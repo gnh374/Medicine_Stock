@@ -327,6 +327,7 @@ Menurut saya penggunaan fetch API lebih baik karena fetch API mendukung konsep d
 ```
 div class="card-container" id ="item_card"
 ```
+<br>
 4. Kemudian pada main.html bagian paling bawah saya membuat block script dan membuat fungsi asinkronus bernama getProducts yang jika dipanggil akan melakukan pengambilan data dari url get_product_json. Setelah pengambilan data selesai dan didapat data berbentuk json, data diubah menjadi objek yang dapat digunakan dalam kode java script. <br>
 5. Kemudian saya juga membuat fungsi asinkronus refreshProducts(). Fungsi ini akan memperbarui item denfan id item_card yang adalah class card container. Fungsi ini akan mengosongkan item dengan id "item_card" di HTML. Kemudian ada string HTML yang akan berisi daftar item. Setiap item adalah sebuah card. Lalu melakukan iterasi untuk semua data produk dan memasukkan informasi nama, jumlah, deskripsi ke dalam elemen div dengan class card dan menambahkannya ke dalam string HTML. Kemudian mengisi element HTML dengan id "item_card" dengan string HTML tadi. <br>
 6. Saya juga memanggil function refreshProduct() ini dalam script agar selalu memanggil function ini setiap halaman ini dibuka, sehingga selalu merefresh denga data terbaru. <br>
