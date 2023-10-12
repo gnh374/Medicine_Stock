@@ -287,3 +287,62 @@ Saya membuat user dengan masuk ke laman register, kemudian login dan membuat 3 p
 Penggunaan: <br>
 -Pakai Bootstrap saat ingin mendesain web dengan bagus dan lebih mudah karena hanya perlu memakai komponen yang sudah ada. Cocok jika tampilan bukanlah hal yang utama dan konsistensi cukup diperhatikan. <br>
 -Pakai Tailwind jika ingin melakukan banyak kustomisasi desain. Cocok digunakan untuk mengatur tampilan dengan cepat menggunakan kelas-kelas langsung di elemen HTML tanpa harus membuat banyak CSS kustom. <br>
+
+<h1> Tugas 6 </h1>
+<h4> Perbedaan antara asynchronous programming dengan synchronous programming </h4>
+- Eksekusi Bersamaan<br>
+1. Sync: tugas-tugas dieksekusi secara berurutan, satu demi satu. Jika tugas tertentu memakan waktu, maka seluruh eksekusi program akan terhenti sampai tugas tersebut selesai. <br>
+2. Async:  tugas-tugas dapat dieksekusi secara bersamaan tanpa harus menunggu tugas sebelumnya selesai. Ini memungkinkan program untuk terus berjalan dan melakukan pekerjaan lain selama tugas yang memakan waktu sedang berlangsung. <br>
+
+-Blocking vs. Non-blocking: <br>
+1.Sync: Jika ada tugas yang memakan waktu akan memblokir eksekusi program <br>
+2.Async: Tugas yang memakan waktu dieksekusi secara non-blocking sehingga eksekusi program tidak terhenti <br>
+
+-Callback vs Await/Async: <br>
+1.Sync:  menggunakan pemanggilan fungsi (function calls) secara linear untuk menjalankan tugas secara berurutan. <br>
+2.Async : menggunakan async/await untuk mengelola tugas secara asinkronus <br>
+
+-Lainnya <br>
+1.Sync :Mudah dimengerti dan di-debug, sederhana untuk dikodekan <br>
+2.Async: Meningkatkan responsivitas dan kinerja app yang membutuhkan banyak I/O, dapat mengelola banyak tugas bersamaan, cocok untuk pengembangan app jaringan <br>
+
+<h1>  event-driven programming </h1>
+Pendekatan di mana program membebrikan respons sesuai dengan interaksi yang dilakukan oleh pengguna. Jadi, program akan berjalan terus-menerus, lalu saat terjadi suatu peristiwa (aksi yang dilakukan user), barulah program merespons dengan respons yang sesuai.
+<br>
+Salah satu contohnya adalah atribut onclick pada button. Atribut ini berfungsi untuk menentukan tindakan yang akan dilakukan ketika button tersebut diklik
+
+<h1>Penerapan asynchronous programming pada AJAX. </h1>
+Dalam AJAX, asinkronus programming memungkinkan user untuk membuat request tanpa harus menunggu hasilnya, sehingga halaman web tetap responif selama proses tersebut berlangsung. <br>
+
+Dalam hal ini kita menggunakan fungsi fetch untuk mengirim permintaan jaringan asinkron (misalnya, permintaan HTTP) ke server dan menangani respons yang diterima. Biasnya kita juga menggunakan async/await untuk membuat proses asinkrinus menjadi lebih clean
+
+<h1> Perbedaan Fetch API dan library jQuery </h1>
+Menurut saya penggunaan fetch API lebih baik karena fetch API mendukung konsep dan sintaks yang lebih modern dibandingkan dengan pendekatan jQuery. Selain itu, Fetch API menggunakan promise yang membuatnya menjadi lebih bersih dan mudah dibaca. Pengguaan promise ini juga memungkinkann kita untuk menggunakan metode .then() dan .catch() untuk menangani hasil dan kesalahan dengan lebih bersih dan terstruktur. Hal ini juga menghindari masalah callback hell yang sering terjadi pada jQuery. Fetch API juga memungkinkan kita untuk membuat permintaan HTTP header denga berbagai metode dan mengatur header dengan mudah.
+
+<h1> Step by Step </h1>
+- Ajax GET
+1. Pertama-tama saya membuat fungsi yang akan mengembalikan data json yaitu fungsi get_product_json pada views.py <br>
+2. Lalu saya mangatur routing untuk fungsi ini pada urls.py di app main <br>
+3. Saya mengubah format card sehingga menjadi
+```
+<div class="card-container" id ="item_card">
+```
+4. Kemudian pada main.html bagian paling bawah saya membuat block script dan membuat fungsi asinkronus bernama getProducts yang jika dipanggil akan melakukan pengambilan data dari url get_product_json. Setelah pengambilan data selesai dan didapat data berbentuk json, data diubah menjadi objek yang dapat digunakan dalam kode java script. <br>
+4. Kemudian saya juga membuat fungsi asinkronus refreshProducts(). Fungsi ini akan memperbarui item denfan id item_card yang adalah class card container. Fungsi ini akan mengosongkan item dengan id "item_card" di HTML. Kemudian ada string HTML yang akan berisi daftar item. Setiap item adalah sebuah card. Lalu melakukan iterasi untuk semua data produk dan memasukkan informasi nama, jumlah, deskripsi ke dalam elemen div dengan class card dan menambahkannya ke dalam string HTML. Kemudian mengisi element HTML dengan id "item_card" dengan string HTML tadi. <br>
+5. Saya juga memanggil function refreshProduct() ini dalam script agar selalu memanggil function ini setiap halaman ini dibuka, sehingga selalu merefresh denga data terbaru. <br>
+
+-Ajax POST <br>
+1.Membuat fungsi add_product_ajax untuk menambahkan produk ke database melalui permintaan POST menggunakan AJAX. Jika requestnya adalah POST, fungsi ini akan mengambil data nama, jumlah, description dari permintaan POST user lalu membuat objek ITEM baru. Lalu objek ini akan disimpan di database. Lalu akan dikembalikan httpresponse. Jika permintaan gagal akan dikembalkan httpresponnotfound <br>
+2.Menambahkan routing untuk  function add_product_ajax pada urls.py pada app main <br>
+3.Membuat modal sebagai form dengan bootstrap <br>
+4.Lalu mengganti button "add product" pada navbar terdahulu sehingga mengimplementasikan ajax dan saat di klik terhubung dengan modal <br>
+5.Lalu saya membuat function addProduct() yang akan melakukan request AJAX POST ke url add_product_ajax. Disini kita mengambil data dari elem formulit HTML dengan id form lalu mengirimkannya dalam bentuk objek FormData. Setelah itu  memanggil refrestProduct() untuk melakukan refresh halaman. Disini juga kita mengirim data formulir ke views add_product_ajax Django untuk pemrosesan lebih lanjut.Lalu melakukan reset form <br>
+6.Kemudian kita mengatur agar button add product dalam form saat di klik akan memanggil function addProduct()
+
+-Perintah collectstatic <br>
+1.Pada settings.py kita mengatur STATIC_URL (URL ke akses ke file statis), STATIC_ROOT (lokasi file-file dikumpulkan), dan STATICFILES_DIRS (direktori untuk mencari file statis tambahan). Lalu menjalan kan perintah
+```
+python manage.py collectstatic
+
+```
+

@@ -1,6 +1,6 @@
 from django.urls import path
 from main.views import show_main, create_product, show_xml, show_json, show_json_by_id, show_xml_by_id
-from main.views import register, login_user, logout_user, hapus, tambah, kurang
+from main.views import register, login_user, logout_user, hapus, tambah, kurang, get_product_json, add_product_ajax
 app_name = 'main'
 
 #url untuk app main
@@ -18,4 +18,6 @@ urlpatterns = [
     path('hapus/<int:id>/', hapus, name ='hapus'),
     path('tambah/<int:id>/', tambah, name ='tambah'),
     path('kurang/<int:id>/', kurang, name ='kurang'),
+    path('get-product/', get_product_json, name='get_product_json'),
+    path('create-ajax/', add_product_ajax, name='add_product_ajax')
 ]
