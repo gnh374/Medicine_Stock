@@ -323,7 +323,7 @@ Menurut saya penggunaan fetch API lebih baik karena fetch API mendukung konsep d
 - Ajax GET <br>
 1. Pertama-tama saya membuat fungsi yang akan mengembalikan data json yaitu fungsi get_product_json pada views.py <br>
 2. Lalu saya mangatur routing untuk fungsi ini pada urls.py di app main <br>
-3. Saya mengubah format card sehingga menjadi
+3. Saya mengubah format card container sehingga menjadi
 ```
 div class="card-container" id ="item_card"
 ```
