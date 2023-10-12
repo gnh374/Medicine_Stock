@@ -306,21 +306,21 @@ Penggunaan: <br>
 1.Sync :Mudah dimengerti dan di-debug, sederhana untuk dikodekan <br>
 2.Async: Meningkatkan responsivitas dan kinerja app yang membutuhkan banyak I/O, dapat mengelola banyak tugas bersamaan, cocok untuk pengembangan app jaringan <br>
 
-<h1>  event-driven programming </h1>
+<h4>  event-driven programming </h4>
 Pendekatan di mana program membebrikan respons sesuai dengan interaksi yang dilakukan oleh pengguna. Jadi, program akan berjalan terus-menerus, lalu saat terjadi suatu peristiwa (aksi yang dilakukan user), barulah program merespons dengan respons yang sesuai.
 <br>
 Salah satu contohnya adalah atribut onclick pada button. Atribut ini berfungsi untuk menentukan tindakan yang akan dilakukan ketika button tersebut diklik
 
-<h1>Penerapan asynchronous programming pada AJAX. </h1>
+<h4>Penerapan asynchronous programming pada AJAX. </h4>
 Dalam AJAX, asinkronus programming memungkinkan user untuk membuat request tanpa harus menunggu hasilnya, sehingga halaman web tetap responif selama proses tersebut berlangsung. <br>
 
 Dalam hal ini kita menggunakan fungsi fetch untuk mengirim permintaan jaringan asinkron (misalnya, permintaan HTTP) ke server dan menangani respons yang diterima. Biasnya kita juga menggunakan async/await untuk membuat proses asinkrinus menjadi lebih clean
 
-<h1> Perbedaan Fetch API dan library jQuery </h1>
+<h4> Perbedaan Fetch API dan library jQuery </h4>
 Menurut saya penggunaan fetch API lebih baik karena fetch API mendukung konsep dan sintaks yang lebih modern dibandingkan dengan pendekatan jQuery. Selain itu, Fetch API menggunakan promise yang membuatnya menjadi lebih bersih dan mudah dibaca. Pengguaan promise ini juga memungkinkann kita untuk menggunakan metode .then() dan .catch() untuk menangani hasil dan kesalahan dengan lebih bersih dan terstruktur. Hal ini juga menghindari masalah callback hell yang sering terjadi pada jQuery. Fetch API juga memungkinkan kita untuk membuat permintaan HTTP header denga berbagai metode dan mengatur header dengan mudah.
 
-<h1> Step by Step </h1>
-- Ajax GET
+<h4> Step by Step </h4>
+- Ajax GET <br>
 1. Pertama-tama saya membuat fungsi yang akan mengembalikan data json yaitu fungsi get_product_json pada views.py <br>
 2. Lalu saya mangatur routing untuk fungsi ini pada urls.py di app main <br>
 3. Saya mengubah format card sehingga menjadi
@@ -328,8 +328,8 @@ Menurut saya penggunaan fetch API lebih baik karena fetch API mendukung konsep d
 <div class="card-container" id ="item_card">
 ```
 4. Kemudian pada main.html bagian paling bawah saya membuat block script dan membuat fungsi asinkronus bernama getProducts yang jika dipanggil akan melakukan pengambilan data dari url get_product_json. Setelah pengambilan data selesai dan didapat data berbentuk json, data diubah menjadi objek yang dapat digunakan dalam kode java script. <br>
-4. Kemudian saya juga membuat fungsi asinkronus refreshProducts(). Fungsi ini akan memperbarui item denfan id item_card yang adalah class card container. Fungsi ini akan mengosongkan item dengan id "item_card" di HTML. Kemudian ada string HTML yang akan berisi daftar item. Setiap item adalah sebuah card. Lalu melakukan iterasi untuk semua data produk dan memasukkan informasi nama, jumlah, deskripsi ke dalam elemen div dengan class card dan menambahkannya ke dalam string HTML. Kemudian mengisi element HTML dengan id "item_card" dengan string HTML tadi. <br>
-5. Saya juga memanggil function refreshProduct() ini dalam script agar selalu memanggil function ini setiap halaman ini dibuka, sehingga selalu merefresh denga data terbaru. <br>
+5. Kemudian saya juga membuat fungsi asinkronus refreshProducts(). Fungsi ini akan memperbarui item denfan id item_card yang adalah class card container. Fungsi ini akan mengosongkan item dengan id "item_card" di HTML. Kemudian ada string HTML yang akan berisi daftar item. Setiap item adalah sebuah card. Lalu melakukan iterasi untuk semua data produk dan memasukkan informasi nama, jumlah, deskripsi ke dalam elemen div dengan class card dan menambahkannya ke dalam string HTML. Kemudian mengisi element HTML dengan id "item_card" dengan string HTML tadi. <br>
+6. Saya juga memanggil function refreshProduct() ini dalam script agar selalu memanggil function ini setiap halaman ini dibuka, sehingga selalu merefresh denga data terbaru. <br>
 
 -Ajax POST <br>
 1.Membuat fungsi add_product_ajax untuk menambahkan produk ke database melalui permintaan POST menggunakan AJAX. Jika requestnya adalah POST, fungsi ini akan mengambil data nama, jumlah, description dari permintaan POST user lalu membuat objek ITEM baru. Lalu objek ini akan disimpan di database. Lalu akan dikembalikan httpresponse. Jika permintaan gagal akan dikembalkan httpresponnotfound <br>
