@@ -341,7 +341,7 @@ div class="card-container" id ="item_card"
 6.Kemudian kita mengatur agar button add product dalam form saat di klik akan memanggil function addProduct()
 
 -Perintah collectstatic <br>
-1.Pada settings.py kita mengatur STATIC_URL (URL ke akses ke file statis), STATIC_ROOT (lokasi file-file dikumpulkan), dan STATICFILES_DIRS (direktori untuk mencari file statis tambahan). Lalu menjalan kan perintah
+1.Pada settings.py kita mengatur STATIC_URL (URL ke akses ke file statis), STATIC_ROOT (lokasi file-file dikumpulkan). Lalu menjalan kan perintah
 ```
 python manage.py collectstatic
 
