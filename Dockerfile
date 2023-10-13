@@ -4,7 +4,7 @@ WORKDIR /app
 
 ENV PYTHONUNBUFFERED=1 \
     PYTHONPATH=/app \
-    DJANGO_SETTINGS_MODULE=Medicine_Stock.settings \
+    DJANGO_SETTINGS_MODULE=medicine_stock.settings \
     PORT=8000 \
     WEB_CONCURRENCY=2
 
