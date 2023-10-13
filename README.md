@@ -1,4 +1,4 @@
-Link : https://medicine-stock-naomi.adaptable.app 
+Link : (https://gabriella-naomi21-tugas.pbp.cs.ui.ac.id./)
 
 <h1> Tugas 2 </h1>
 
