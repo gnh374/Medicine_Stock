@@ -22,4 +22,5 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     #url untuk main
     path('', include('main.urls')),
+     path('auth/', include('authentication.urls')),
 ]
