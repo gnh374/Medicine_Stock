@@ -22,7 +22,6 @@ from django.http import HttpResponseNotFound;
 #function yang akan dipanggil untuk homepage main
 
 @login_required(login_url='/login')
-
 def show_main(request):
     items = Item.objects.filter(user=request.user)
     data_length = len(items)
@@ -80,6 +79,7 @@ def show_json_by_id(request, id):
     data = Item.objects.filter(pk=id)
     return HttpResponse(serializers.serialize("json", data), content_type="application/json")
 
+@csrf_exempt
 def register(request):
     form = UserCreationForm()
 
@@ -92,6 +92,7 @@ def register(request):
     context = {'form':form}
     return render(request, 'register.html', context)
 
+@csrf_exempt
 def login_user(request):
     
     if request.method == 'POST':
